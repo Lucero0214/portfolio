@@ -4,12 +4,17 @@ body {
     padding: 0px;
     font-family: "Open Sans", sans-serif;
     font-weight: 500;
+    background-color: #A3bbad;
 }
 
 h1 {
     font-family: "Dancing Script";
     font-size: 50px;
     font-weight: 400;
+}
+h2{
+    font-size: 36pt;
+    margin: 0 auto;
 }
 
 h4 {
@@ -19,64 +24,208 @@ h4 {
 
 p {
     font-size: 17px;
-}
-
-.nav-bar {
-    box-sizing: border-box;
-    background-color: black;
-    height: 50px;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
     align-items: center;
+
 }
 
-.nav-bar-about,
-.nav-bar-portfolio,
-.nav-bar-skills,
-.nav-bar-contact {
-    box-sizing: border-box;
-    border: 2px solid transparent;
-    font-size: 14px;
-    margin: 10px;
-    font-weight: 400;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+    background-color: #000;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav li {
+    margin: auto;
+  }
+  
+ nav a {
+    font-size: 1.5rem;
     color: white;
-    border: none;
-    background-color: transparent;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
     text-transform: uppercase;
-    transition: color .2s ease;
-    outline: none;
-}
+  }
+  nav li a:hover:not(.active) {
+    background-color: #E4C5AF;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
 
 .header-container {
-    min-width: 320px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
-    padding-top: 5%;
-    display: flex;
-    flex-direction: column;
+    padding: 1.5rem;
     justify-content: center;
-    align-items: center;
+    float: left;
 }
 
 .header-profile-img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     background: white;
     border-radius: 100%;
     border: 3px solid white;
-    box-shadow: 0 0 30px 0 pink;
+    box-shadow: 0 0 30px 0 white;
 }
 
-.header-name {
-    margin: 20px;
-    color: #000;
-    text-shadow: 0 0 10px pink;
-}
-
-.header-description {
+.header-wrapper {
+    float: none;
     letter-spacing: .3em;
     color: black;
+    margin: 0;
+    padding: 2rem;
+}
+.btn {
+    float: right;
+    padding: .5rem;
+    padding-right: 15%;
+  
+}
+.button, .button2 {
+    background-color: #E4C5AF;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: auto;
+    cursor: pointer;
+  }
+
+.skills-container {
+    height: 150px;
+    margin: 0 auto;  
+    display: flex;
+    padding: .5rem;
+    align-items: center;
+    color: #E4C5AF;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
+
+.features{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap:5%;
+    width: 95vw;
+    height: 50vh;
+    padding: 2.0rem;
+}
+.grid-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+  }
+  
+  .grid-2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row: 1;
+  }
+  
+  .grid-3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 2;
+  }
+  
+  .grid-4 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row: 2;
+  }
+  
+  @media screen and (max-width: 600px) {
+
+    .header-container {
+        width: 200px;
+        height: 200px;   
+        float: none;
+        padding: 5%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header-profile-img {
+        width: 175px;
+        height: 200px;
+        background: white;
+        border: 3px solid white;
+        box-shadow: 0 0 30px 0 white;
+    }
+   
+    .header-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: .3em;
+    }
+      nav ul {
+        flex-direction: column;
+        height: auto;
+      }
+    
+      nav li {
+        margin: 0 auto;
+        padding: .5rem;
+      }
+      nav a{
+        font-size: 13pt;
+      }
+    .button, .button2 {
+        background-color: #E4C5AF;
+        border: none;
+        color: white;
+        padding: 5px 5px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        margin: auto;
+        cursor: pointer;
+      }
+     
+    .grid-1{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row: 1;
+  }
+  .grid-2 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row: 2;
+  }
+  .grid-3{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row: 3;
+  }
+  .grid-4{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row: 4;
+  }
+  .skills-description {
+    color: #E4C5AF;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+  }
