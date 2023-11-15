@@ -8,9 +8,11 @@ body {
 }
 
 h1 {
-    font-family: "Dancing Script";
+  font-family: 'Bebas Neue', sans-serif;
     font-size: 50px;
-    font-weight: 400;
+    font-weight: 300;
+    padding-top: 2.5rem;
+    line-height: 5%;
 }
 h2{
     font-size: 36pt;
@@ -20,7 +22,7 @@ h2{
 
 h4 {
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 600;
 }
 
 h5{
@@ -32,7 +34,8 @@ h5{
 p {
     font-size: 17px;
     align-items: center;
-
+    line-height: 2.5;
+   padding: .5;
 }
 
 nav ul {
@@ -71,8 +74,14 @@ nav ul {
     width: 300px;
     height: 500px;
     margin: 0 auto;
-    padding: 1.5rem;
     float: left;
+    flex-direction: column;
+    padding-left: 1.5rem;
+}
+.header-wrapper {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-profile-img {
@@ -175,8 +184,7 @@ main {
     .header-container {
         width: 200px;
         height: 200px;   
-        //float: none;
-        padding: 5%;
+        padding: 1.0rem;
         flex-direction: column;
         justify-content: center;
     }
@@ -190,12 +198,11 @@ main {
     }
    
     .header-wrapper {
-        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        //letter-spacing: .3em;
     }
+    
       nav ul {
         flex-direction: column;
         height: auto;
@@ -208,6 +215,11 @@ main {
       nav a{
         font-size: 13pt;
       }
+      h4 {
+        font-size: 16px;
+        font-weight: 600;
+
+    }
     .button, .button2 {
         background-color: #E4C5AF;
         border: none;
